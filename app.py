@@ -14,9 +14,12 @@ class VideoProcessor:
 			cv2.rectangle(frm, (x,y), (x+w, y+h), (0,255,0), 3)
 
 		return av.VideoFrame.from_ndarray(frm, format='bgr24')
+    
+#webrtc_streamer(key="example", video_transformer_factory=VideoProcessor)
 
-webrtc_streamer(key="key", video_processor_factory=VideoProcessor,
-				rtc_configuration=RTCConfiguration(
-					{"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}
-					)
-	)
+#webrtc_streamer(key="key", video_processor_factory=VideoProcessor,
+#				rtc_configuration=RTCConfiguration(
+#					{"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}
+#					)
+#	)
+webrtc_streamer(key="key", video_processor_factory=VideoProcessor)
