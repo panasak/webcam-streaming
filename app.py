@@ -22,4 +22,4 @@ class VideoProcessor:
 #					{"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}
 #					)
 #	)
-webrtc_streamer(key="key", video_processor_factory=VideoProcessor)
+webrtc_streamer(key="key", video_transformer_factory=VideoProcessor)
